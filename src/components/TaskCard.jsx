@@ -1,11 +1,8 @@
 import React from "react";
 
-const TaskCard = ({ task, handleTaskToggle }) => {
+const TaskCard = ({ task, handleTaskToggle, handleTaskDelete }) => {
   return (
-    <li
-      key={task.id}
-      className={`task-item ${task.completed ? "task-completed" : ""}`}
-    >
+    <li className={`task-item ${task.completed ? "task-completed" : ""}`}>
       <label className="task-checkbox">
         <input
           type="checkbox"
@@ -16,6 +13,7 @@ const TaskCard = ({ task, handleTaskToggle }) => {
       <span className={`task-text ${task.completed ? "task-completed" : ""}`}>
         {task.title}
       </span>
+      <button onClick={() => handleTaskDelete(task.id)}>Delete</button>
     </li>
   );
 };

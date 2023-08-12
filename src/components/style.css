@@ -49,3 +49,21 @@
   text-decoration: line-through;
   color: #888;
 }
+
+button {
+    padding: 0.5rem;
+    border-radius: 10px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+.add-task-input {
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  width: 70%;
+}
+
+.add-task-btn {
+  background-color: green;
+}
